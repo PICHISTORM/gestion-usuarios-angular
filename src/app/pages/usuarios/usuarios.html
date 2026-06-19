@@ -1,1 +1,9 @@
-<p>usuarios works!</p>
+@if (cargando) {
+  <p>Cargando...</p>
+} @else {
+  <ul>
+    @for (usuario of usuarios; track usuario.id) {
+      <li>{{ usuario.name }} - {{ usuario.email }}</li>
+    }
+  </ul>
+}
