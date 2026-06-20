@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UsuariosService, Usuario } from '../../core/services/usuarios.service';
-import { Injectable, inject } from '@angular/core';
+import { inject } from '@angular/core';
 
 @Component({
   selector: 'app-usuarios',

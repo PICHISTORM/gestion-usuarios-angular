@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+// 2. CONFIGURACIÓN BASE DEL PROYECTO
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #212529;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+
+}
+
+// 3. ESTILOS TIPOGRÁFICOS GENERALES (H1 a H6)
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: #1a1a1a;
+ // margin-top: 0;
+  //margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+
+h1 { font-size: 2.5rem;   font-weight: 700; } // ~40px
+h2 { font-size: 2rem;     font-weight: 600; } // ~32px
+h3 { font-size: 1.75rem;  font-weight: 600; } // ~28px
+h4 { font-size: 1.5rem;   font-weight: 600; } // ~24px
+h5 { font-size: 1.25rem;  font-weight: 600; } // ~20px
+h6 { font-size: 1rem;     font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+
+//PÁRRAFOS Y TEXTO GENERAL
+p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #4a4a4a;
+}
+
+
+// Enlaces
+a {
+  color: #0d6efd;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: #0a58ca;
+    text-decoration: underline;
+  }
+}
+
+// Listas
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+
+  li {
+    line-height: 1.5;
+    margin-bottom: 0.25rem;
+  }
+}
