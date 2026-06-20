@@ -1,0 +1,44 @@
+
+:host {
+  display: block;
+  padding-bottom: 2rem;
+}
+
+h2 {
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.card {
+  background-color: #00B8E2;
+  border: none;
+  border-radius: 12px;
+  color: #000000;
+  padding: 1rem;
+}
+
+.card-header {
+  background-color: transparent;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+
+.card-title, .card-subtitle, p, h6 {
+  color: #000000;
+}
+
+.card-title {
+  font-weight: 900;
+}
+
+.card-subtitle {
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+h6 {
+  font-weight: 900;
+  text-transform: uppercase;
+}

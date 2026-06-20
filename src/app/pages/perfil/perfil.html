@@ -1,1 +1,37 @@
-<p>perfil works!</p>
+<div class="container mt-4">
+  <h2>Perfiles de Usuario</h2>
+
+  @if (cargando) {
+  <div class="d-flex justify-content-center align-items-center gap-2" style="min-height: 200px;">
+    <div class="spinner-border text-primary" role="status" aria-hidden="true"></div>
+    <span>Cargando...</span>
+  </div>
+  }@else {
+    <div class="row">
+      @for (usuario of usuarios; track usuario.id) {
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-header">
+              <h5 class="card-title mb-0">{{ usuario.name }}</h5>
+              <h6 class="card-subtitle text-muted">@{{ usuario.name }}</h6>
+            </div>
+            <div class="card-body">
+              <p><strong>Email:</strong> {{ usuario.email }}</p>
+              <p><strong>Teléfono:</strong> {{ usuario.phone }}</p>
+
+              <hr>
+
+              <h6>Dirección:</h6>
+              <p class="mb-1">
+                {{ usuario.address.street }}, {{ usuario.address.suite }}
+              </p>
+              <p class="mb-1">
+                {{ usuario.address.city }}, {{ usuario.address.zipcode }}
+              </p>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

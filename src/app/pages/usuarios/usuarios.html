@@ -1,9 +1,23 @@
-@if (cargando) {
-  <p>Cargando...</p>
-} @else {
-  <ul>
-    @for (usuario of usuarios; track usuario.id) {
-      <li>{{ usuario.name }} - {{ usuario.email }}</li>
-    }
-  </ul>
-}
+<div class="container mt-4">
+  <h2>Lista de Usuarios</h2>
+
+  @if (cargando) {
+  <div class="d-flex justify-content-center align-items-center gap-2" style="min-height: 200px;">
+    <div class="spinner-border text-primary" role="status" aria-hidden="true"></div>
+    <span>Cargando...</span>
+  </div>
+  }@else {
+    <div class="row">
+      @for (usuario of usuarios; track usuario.id) {
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">{{ usuario.name }}</h5>
+              <p class="card-text text-muted">{{ usuario.email }}</p>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

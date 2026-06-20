@@ -1,0 +1,50 @@
+
+
+/* para pantallas grandes (escritorio) */
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .container__background,
+  .imagenHome {
+    flex: 1;
+  }
+}
+
+/* para pantallas pequeñas (móvil) */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 18rem;
+    flex-direction: column;
+  }
+}
+
+.imagenHome {
+  max-width: 100%;
+  margin: 2rem 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+}
+
+.container__background {
+  background-color: #00B8E2;
+  padding: 2.5rem;
+  border-radius: 12px;
+
+
+  h1, h2, h3, p {
+    color: #000000;
+  }
+
+  h1 {
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+}
