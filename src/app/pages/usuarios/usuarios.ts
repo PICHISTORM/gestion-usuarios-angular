@@ -13,7 +13,7 @@ export class Usuarios {
 
   private UsuariosService = inject(UsuariosService);
   usuarios: Usuario[] = [];
-   cargando = true;
+  cargando = true;
 
   ngOnInit(): void {
     setTimeout(() => {
@@ -24,4 +24,7 @@ export class Usuarios {
     }, 5000);
   }
 
+  trackByUsuario(_: number, usuario: Usuario): number {
+    return usuario.id;
+  }
 }

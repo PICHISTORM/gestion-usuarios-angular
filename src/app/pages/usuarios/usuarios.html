@@ -1,9 +1,12 @@
-@if (cargando) {
-  <p>Cargando...</p>
-} @else {
-  <ul>
-    @for (usuario of usuarios; track usuario.id) {
-      <li>{{ usuario.name }} - {{ usuario.email }}</li>
-    }
-  </ul>
-}
+<section class="usuarios-page">
+  <div *ngIf="cargando" class="loading-card">
+    <p>Cargando usuarios...</p>
+  </div>
+  <div *ngIf="!cargando" class="usuarios-list">
+    <h2>Usuarios encontrados</h2>
+    <div *ngFor="let usuario of usuarios; trackBy: trackByUsuario" class="usuario-card">
+      <p class="usuario-name">{{ usuario.name }}</p>
+      <p class="usuario-email">{{ usuario.email }}</p>
+    </div>
+  </div>
+</section>

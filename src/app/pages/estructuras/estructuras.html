@@ -1,1 +1,36 @@
-<p>estructuras works!</p>
+<section class="estructuras-page">
+  <div class="estructura-card">
+    <h2>Ejemplo con ngIf</h2>
+    <p>ngIf muestra u oculta contenido según una condición booleana.</p>
+    <button (click)="mostrarDetalle = !mostrarDetalle">
+      {{ mostrarDetalle ? 'Ocultar' : 'Mostrar' }} detalle
+    </button>
+    <div *ngIf="mostrarDetalle" class="example-box">
+      El elemento se muestra porque la condición es verdadera.
+    </div>
+  </div>
+
+  <div class="estructura-card">
+    <h2>Ejemplo con ngFor</h2>
+    <p>ngFor recorre una lista y repite su contenido para cada elemento.</p>
+    <ul>
+      <li *ngFor="let elemento of elementos">{{ elemento }}</li>
+    </ul>
+  </div>
+
+  <div class="estructura-card">
+    <h2>Ejemplo con ngSwitch</h2>
+    <p>ngSwitch selecciona una sección mostrando sólo la opción correspondiente.</p>
+    <div class="switch-controls">
+      <button *ngFor="let item of opcionesSwitch" (click)="cambiarOpcion(item)" [class.active]="opcion === item">
+        {{ item | titlecase }}
+      </button>
+    </div>
+    <div [ngSwitch]="opcion" class="example-box">
+      <p *ngSwitchCase="'angular'">Angular permite construir aplicaciones web con componentes y directivas.</p>
+      <p *ngSwitchCase="'ionic'">Ionic facilita crear aplicaciones móviles híbridas con Web Components.</p>
+      <p *ngSwitchCase="'typescript'">TypeScript añade tipos estáticos a JavaScript y mejora la experiencia de desarrollo.</p>
+      <p *ngSwitchDefault>Selecciona una tecnología para ver una breve explicación.</p>
+    </div>
+  </div>
+</section>

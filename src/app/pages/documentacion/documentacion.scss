@@ -1,0 +1,128 @@
+.documentacion-page {
+  display: grid;
+  gap: 1.5rem;
+  place-items: center;
+}
+
+.doc-intro {
+  max-width: 760px;
+  background: #ffffff;
+  padding: 1.75rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.06);
+}
+
+.doc-intro h2 {
+  margin-top: 0;
+}
+
+.doc-intro a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #1d4ed8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.carousel {
+  width: 100%;
+  max-width: 900px;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  min-height: 280px;
+  aspect-ratio: 16 / 9;
+  background: #111827;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  display: grid;
+  align-items: end;
+  justify-items: center;
+  overflow: hidden;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.25rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.85) 100%);
+  color: #ffffff;
+}
+
+.carousel-caption h3 {
+  margin: 0 0 0.4rem;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.85rem;
+}
+
+.carousel-controls button {
+  border: none;
+  padding: 0.85rem 1.2rem;
+  border-radius: 0.85rem;
+  background: #1d4ed8;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.carousel-controls button:hover {
+  background: #2563eb;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #94a3b8;
+  cursor: pointer;
+}
+
+.carousel-indicators button.active {
+  background: #1d4ed8;
+}
+
+@media (max-width: 767px) {
+  .carousel-controls {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}

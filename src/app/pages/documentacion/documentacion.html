@@ -1,1 +1,38 @@
-<p>documentacion works!</p>
+<section class="documentacion-page">
+  <div class="doc-intro">
+    <h2>Documentación oficial de Ionic</h2>
+    <p>Consulta la guía oficial de Ionic para aprender a construir aplicaciones híbridas con Angular.</p>
+    <a href="https://ionicframework.com/docs" target="_blank" rel="noopener noreferrer">Ir a la documentación de Ionic</a>
+  </div>
+
+  <div class="carousel" *ngIf="slides.length">
+    <div class="carousel-inner">
+      <div
+        *ngFor="let slide of slides; let i = index"
+        class="carousel-item"
+        [class.active]="i === activeIndex"
+      >
+        <img [src]="slide.src" [alt]="slide.title" loading="lazy" />
+        <div class="carousel-caption">
+          <h3>{{ slide.title }}</h3>
+          <p>{{ slide.subtitle }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-controls">
+      <button type="button" (click)="prev()">Anterior</button>
+      <button type="button" (click)="next()">Siguiente</button>
+    </div>
+
+    <div class="carousel-indicators">
+      <button
+        *ngFor="let _slide of slides; let i = index"
+        type="button"
+        [class.active]="i === activeIndex"
+        aria-label="Slide {{ i + 1 }}"
+        (click)="select(i)"
+      ></button>
+    </div>
+  </div>
+</section>

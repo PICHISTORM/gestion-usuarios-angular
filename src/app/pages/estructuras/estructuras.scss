@@ -1,0 +1,61 @@
+.estructuras-page {
+  display: grid;
+  gap: 1.25rem;
+  place-items: center;
+}
+
+.estructura-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
+  width: 100%;
+  max-width: 760px;
+}
+
+.estructura-card h2 {
+  margin-top: 0;
+  color: #111827;
+}
+
+.estructura-card p {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.example-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f3f4f6;
+  border-radius: 0.75rem;
+}
+
+.switch-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.switch-controls button {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #111827;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
+
+.switch-controls button.active {
+  background: #C5DFF2;
+  border-color: #93c5fd;
+}
+
+.estructura-card ul {
+  padding-left: 1.15rem;
+  margin: 0;
+  color: #111827;
+}
+
+.estructura-card li {
+  margin-bottom: 0.5rem;
+}

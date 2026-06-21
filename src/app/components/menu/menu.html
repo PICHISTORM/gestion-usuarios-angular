@@ -1,0 +1,10 @@
+<nav class="app-menu">
+  <div class="menu-header">
+    <h2 class="titulo">Gestion usuarios</h2>
+  </div>
+  <ul class="menu-list navegacion" type="none">
+    <li *ngFor="let ruta of rutas">
+      <a [routerLink]="ruta.path" routerLinkActive="active">{{ ruta.name }}</a>
+    </li>
+  </ul>
+</nav>
