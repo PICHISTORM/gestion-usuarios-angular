@@ -1,1 +1,26 @@
-<p>estructuras works!</p>
+<div class="titulo">
+  <h1>Estructuras</h1>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    @for(estructura of directivas; track estructura.nombreA){
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-header">
+            <h5 class="card-title mb-0">{{ estructura.nombreA }}</h5>
+            <h6 class="card-subtitle text-muted">{{ estructura.nombreB }}</h6>
+          </div>
+          <div class="card-body">
+
+            <p><strong>Descripción:</strong>{{ estructura.descripcion }}</p>
+            <hr>
+            <h6>Ejemplo:</h6>
+            <img [src]="estructura.imagen" class="card-img-top" [alt]="estructura.alte">
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

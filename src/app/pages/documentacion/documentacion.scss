@@ -1,0 +1,129 @@
+:host {
+  display: block;
+  height: 100vh;
+}
+
+// Contenedor general
+.documentacion-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+//titulo
+h1 {
+  text-align: center;
+  font-weight: 900;
+  margin: 0;
+  background: rgba(255,255,255,0.5);
+  padding: 0.5rem 1rem;
+  color: #FFFFFF;
+  border-radius:10px;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+//carrucel
+.container1 {
+  width: 80%;
+  overflow: hidden;
+  display: flex;
+  gap: 1rem;
+}
+
+
+// Grupos
+.group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 1rem;
+  animation: spin 12s linear infinite;
+}
+
+// Tarjetas
+.card {
+  flex: 0 0 8em;
+  height: 15em;
+  border-radius: 0;
+  overflow: hidden;
+  text-align: center;
+  background: transparent;
+  border: none;
+  box-shadow:none;
+}
+
+//imagenes
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+// Movimiento
+@keyframes spin {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+// Pantalla grande
+@media (min-width: 768px) {
+  .documentacion-page {
+    justify-content: center;
+  }
+
+  .container1 {
+    width: 80%;
+  }
+
+  .card {
+    flex: 0 0 10em;
+    height: 18em;
+  }
+
+  .group {
+    gap: 2rem;
+  }
+}
+
+// Pantalla pequeña
+@media (max-width: 768px) {
+  :host {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .documentacion-page {
+    min-height: 100vh;
+    padding: 2rem 0;
+    gap: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .container1 {
+    width: 95%;
+  }
+
+  .card {
+    flex: 0 0 6em;
+    height: 10em;
+  }
+
+  .group {
+    gap: 1rem;
+  }
+}
+
+.container1::-webkit-scrollbar{
+	display:none;
+}

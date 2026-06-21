@@ -1,1 +1,25 @@
-<p>documentacion works!</p>
+<div class="container mt-4">
+  <div class="documentacion-page">
+    <h1><a href="https://ionicframework.com/docs" target="_blank">Documentación</a></h1><br>
+    </div>
+    <div class="container1">
+      <div class="group">
+        @for (programa of programas; track programa.id){
+        <div class="card">
+          <a [href]="programa.link" target="_blank">
+            <img [src]="programa.imagen" class="card-img-top" alt="...">
+          </a>
+        </div>
+      }
+      </div>
+      <div class="group" aria-hidden="true">
+        @for (programa of programas; track programa.id){
+        <div class="card">
+          <a [href]="programa.link" target="_blank">
+            <img [src]="programa.imagen" class="card-img-top" alt="...">
+          </a>
+        </div>
+      }
+      </div>
+  </div>
+</div>
