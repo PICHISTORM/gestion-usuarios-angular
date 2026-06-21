@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { inject } from '@angular/core';
+
 
 @Component({
   selector: 'app-home',
@@ -10,7 +9,7 @@ import { inject } from '@angular/core';
   styleUrl: './home.scss',
 })
 export class Home {
-private router = inject(Router);
+
 
 
 }
