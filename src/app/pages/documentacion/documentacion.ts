@@ -15,7 +15,7 @@ export class Documentacion {
     {
       id:1,
       nombre:"NodeJS",
-      imagen:"https://mindsparktechnologies.com/wp-content/uploads/2025/05/nodejs.png",
+      imagen:"./assets/images/imagen02.png",
       link:"https://nodejs.org/docs/latest/api/"
     },
 
@@ -23,7 +23,7 @@ export class Documentacion {
     {
       id:2,
       nombre:"TypeScript",
-      imagen:"https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png",
+      imagen:"./assets/images/imagen03.png",
       link:"https://www.typescriptlang.org/docs/"
     },
 
@@ -31,7 +31,7 @@ export class Documentacion {
     {
       id:3,
       nombre:"Angular",
-      imagen:"https://angular.io/assets/images/logos/angular/angular.svg",
+      imagen:"./assets/images/imagen04.png",
       link:"https://angular.dev/"
     },
 
@@ -39,7 +39,7 @@ export class Documentacion {
     {
       id:4,
       nombre:"Ionic",
-      imagen:"https://trbl-services.eu/wp-content/uploads/2018/06/ionic-1.png",
+      imagen:"./assets/images/imagen05.png",
       link:"https://ionicframework.com/docs"
     },
 
@@ -47,7 +47,7 @@ export class Documentacion {
     {
       id:5,
       nombre:"npm",
-      imagen:"https://blog.berkankutuk.dk/tech/npm.png",
+      imagen:"./assets/images/imagen06.png",
       link:"https://docs.npmjs.com/"
     }
 
