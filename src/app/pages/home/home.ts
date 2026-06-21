@@ -12,7 +12,5 @@ import { inject } from '@angular/core';
 export class Home {
 private router = inject(Router);
 
-  goToUsuarios() {
-    this.router.navigate(['/usuarios']);
-  }
+
 }
