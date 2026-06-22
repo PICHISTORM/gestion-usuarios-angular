@@ -9,10 +9,10 @@ import { CommonModule } from '@angular/common';
 })
 export class Perfil {
   usuario = {
-    name: 'Andrea Gómez',
-    email: 'andrea.gomez@ejemplo.com',
-    phone: '+57 310 123 4567',
-    direccion: 'Carrera 45 #23-78, Bogotá, Colombia',
+    name: 'Javier Mendieta Pérez',
+    email: 'javier.mendieta@ejemplo.com',
+    phone: '+52 246 123 4567',
+    direccion: 'Carrera 45 #23-78, Puebla, México',
     nacimiento: '1990-09-05'
   };
 }
